@@ -21,7 +21,7 @@ export const viewStyles = StyleSheet.create({
         paddingRight:10,
         paddingBottom:30,
         justifyContent: 'center',
-        backgroundColor: '#d6ca1a',
+        //backgroundColor: '#d6ca1a',
       },
       footer: {
         width:'100%',
