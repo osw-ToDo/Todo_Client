@@ -18,10 +18,10 @@ export const viewStyles = StyleSheet.create({
         flex: 1,
         height: 640,
         paddingLeft:10,
-        paddingRight:10,
+        paddingRight:30,
         paddingBottom:30,
         justifyContent: 'center',
-        //backgroundColor: '#d6ca1a',
+        backgroundColor: '#d6ca1a',
       },
       footer: {
         width:'100%',

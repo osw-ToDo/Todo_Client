@@ -2,7 +2,7 @@ import React from 'react';
 import { StatusBar,SafeAreaView, Text, View } from 'react-native';
 import { viewStyles, textStyles,  iconStyles } from './styles';
 import EventInput from './EventInput';
-import Input from './components/Input';
+import Input from './components/signInput';
 import {images} from './images';
 import IconButton from './components/IconButton';
 
@@ -16,7 +16,7 @@ const App= () => {
       </View>
 
       <View style = {viewStyles.content}> 
-      <Text style={textStyles.title}>Today'sdd Sign!</Text>
+      <Text style={textStyles.title}>Today's Sign!</Text>
       <Input/>
       </View>
  
