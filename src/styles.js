@@ -6,28 +6,28 @@ export const viewStyles = StyleSheet.create({
       flex: 1,
       backgroundColor: theme.background,
       width: '100%',
-      alignItems: 'flex-start',
+      alignItems: 'center',
       justifyContent:'flex-start',
     },
     header: {
         width:'100%',
-        height:'5%',
-       // backgroundColor: '#ff9a9a',
+        height:50,
+        backgroundColor: '#ff9a9a',
       },
       content: {
         flex: 1,
         height: 640,
         paddingLeft:10,
-        paddingRight:30,
+        paddingRight:10,
         paddingBottom:30,
         justifyContent: 'center',
-        backgroundColor: '#d6ca1a',
+      //  backgroundColor: '#d6ca1a',
       },
       footer: {
         width:'100%',
         height:'5%',
         alignItems: 'flex-end',
-        //backgroundColor: '#1ad657',
+      //  backgroundColor: '#1ad657',
       }
   });
   
@@ -39,7 +39,7 @@ export const textStyles = StyleSheet.create({
       alignItems: 'center',
       marginTop: 10,
       marginLeft: 10,
-      backgroundColor : '#1ad657'
+     // backgroundColor : '#1ad657'
     },
   });
 

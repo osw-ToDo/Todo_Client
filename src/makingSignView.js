@@ -16,7 +16,7 @@ const App= () => {
       </View>
 
       <View style = {viewStyles.content}> 
-      <Text style={textStyles.title}>Today's Sign!</Text>
+      <Text style={textStyles.title}>Today's Sign</Text>
       <Input/>
       </View>
  

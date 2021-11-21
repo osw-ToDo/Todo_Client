@@ -21,8 +21,6 @@ export const inputStyles = StyleSheet.create({
       textAlign: 'left',
       textAlignVertical: 'top',
       marginTop: 10,
-      marginRight: 0,
-      marginLeft: 0,
       paddingLeft:15,
       paddingTop: 10, 
       borderRadius: 2,
