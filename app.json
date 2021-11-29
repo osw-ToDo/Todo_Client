@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "my-project",
-    "slug": "my-project",
+    "name": "team05",
+    "slug": "team05",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -28,5 +29,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     }
+    
   }
 }
