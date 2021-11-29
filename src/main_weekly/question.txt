@@ -1,0 +1,23 @@
+해결할 부분
+
+1. asset의 img 경로 확인
+
+2. render 에러 해결해서 화면 보고, styling 마무리 ** 여기서 계속 에러....
+
+main)
+3. checkbutton 있는 리스트는 input 형태로 제작?
+
+4. trafficSign_main.png 테두리만 img 불러오고, 안의 날짜는 text로 받아야 할듯..
+    -> 그래야 날짜 업데이트 가능.. (이것도 따로 data 불러와야 할 듯...)
+
+weekly)
+5. table 형식 data 불러오는 것으로 다시 짜기.. -> 날짜 data는 어떻게 가져오지??? 
+   //data 불러오는 형식으로 짜놓긴 했는데, data가 없어서 안 돌아감... 
+
+6. alarms은 그냥 img만 넣으면 될까..? 
+
+문제는 만들어 놓은 layout에서 각각의 checklist 나 table 연결을 못하고 있는 것 같음... 
+
+layout (+style) 
+1> main-checkbutton
+2> weekly-table 
