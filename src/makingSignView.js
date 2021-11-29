@@ -5,6 +5,8 @@ import EventInput from './EventInput';
 import Input from './components/signInput';
 import {images} from './images';
 import IconButton from './components/IconButton';
+import Weekly from './src/main_weekly/main';
+import Main from './src/main_weekly/weekly';
 
 const App= () => {
 
