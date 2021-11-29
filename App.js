@@ -1,2 +1,2 @@
-import App from './src/makingSignView';
+import App from './src/Montly';
 export default App;
