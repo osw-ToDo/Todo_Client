@@ -1,3 +1,9 @@
+import SubmitBtn from '../assets/outline_task_alt_black_24.png';
+import UnBox from '../assets/outline_check_box_outline_blank_black_24.png';
+import Box from '../assets/outline_check_box_black_24.png';
+import Delete from '../assets/outline_delete_forever_black_24.png';
+import Edit from '../assets/outline_edit_black_24.png';
+
 import check from '../assets/done.png';
 import back from '../assets/back.png';
 import red from '../assets/red.png';
@@ -20,5 +26,10 @@ export const images = {
     pic3 : pic3,
     pic4 : pic4,
     pic5 : pic5,
+    submit: SubmitBtn,
+    uncompleted: UnBox,
+    completed:Box,
+    delete: Delete,
+    edit: Edit,
     
 }

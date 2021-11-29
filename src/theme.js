@@ -1,7 +1,9 @@
 export const theme = {
-    background: '#E5E5E5',
-    itmeBackground: '#E5E5E5',
-    main: 'black',
-    text: 'black',
-    done: '#616161'
+    background: '#eee9e0',
+    itemBackground: '#e9bd15',
+    main: '#000000',
+    cate: '#343a40',
+    text: '#ffffff',
+    done: '#616161',
+    
 };

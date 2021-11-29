@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Pressable, StyleSheet, View, Image, ColorPropType} from 'react-native';
 import { theme } from "../theme";
@@ -8,9 +7,19 @@ import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 export const IconButton= ({type, onPressOut}) => {
 
+    
+    return (
+        <Pressable onPressOut={onPressOut}>
+            <Image source={type} style={iconStyle.icon}/>
+        </Pressable>
+    );
+};
+
+export const PicButton= ({type, onPressOut}) => {
+
   return (
     <Pressable onPressOut = {onPressOut}>
-        <Image source = {type} style = {iconStyle.icon}/>
+        <Image source = {type} style = {iconStyle.pic}/>
     </Pressable>
    
   );
@@ -43,7 +52,7 @@ const iconStyle = StyleSheet.create({
   },
 });
 
-IconButton.protoTypes = {
+IconButton.propTypes={
     type: PropTypes.oneOf(Object.values(images)).isRequired,
     onPressOut: PropTypes.func,
 };
