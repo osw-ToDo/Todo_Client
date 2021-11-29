@@ -7,7 +7,6 @@ import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 export const IconButton= ({type, onPressOut}) => {
 
-const IconButton = ({type, onPressOut})=> {
     
     return (
         <Pressable onPressOut={onPressOut}>
@@ -47,6 +46,4 @@ IconButton.propTypes={
     type: PropTypes.oneOf(Object.values(images)).isRequired,
     onPressOut: PropTypes.func,
 };
-
-
 
