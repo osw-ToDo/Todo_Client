@@ -1,15 +1,26 @@
 
 import React from 'react';
-import { Pressable, StyleSheet, View, Image} from 'react-native';
+import { Pressable, StyleSheet, View, Image, ColorPropType} from 'react-native';
 import { theme } from "../theme";
 import PropTypes from 'prop-types';
 import { images } from '../images';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
-const IconButton= ({type, onPressOut}) => {
+export const IconButton= ({type, onPressOut}) => {
 
   return (
     <Pressable onPressOut = {onPressOut}>
         <Image source = {type} style = {iconStyle.icon}/>
+    </Pressable>
+   
+  );
+};
+
+export const PicButton= ({type, onPressOut}) => {
+
+  return (
+    <Pressable onPressOut = {onPressOut}>
+        <Image source = {type} style = {iconStyle.pic}/>
     </Pressable>
    
   );
@@ -20,8 +31,16 @@ const iconStyle = StyleSheet.create({
         tintColor: theme.text,
         width: 30,
         height: 30,
-        margin: 10
+        margin: 10,
+        resizeMode: 'contain', 
     },
+    pic: {
+      tintColor: theme.text,
+      width: 50,
+      height: 50,
+      margin: 5,
+      resizeMode: 'contain', 
+  },
 });
 
 IconButton.protoTypes = {
@@ -29,4 +48,5 @@ IconButton.protoTypes = {
     onPressOut: PropTypes.func,
 };
 
-export default IconButton;
+
+

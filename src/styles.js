@@ -11,23 +11,35 @@ export const viewStyles = StyleSheet.create({
     },
     header: {
         width:'100%',
+        
         height:50,
-        backgroundColor: '#ff9a9a',
+        backgroundColor: theme.background,
+        
+        //backgroundColor: '#ff9a9a',
       },
       content: {
-        flex: 1,
+       // flex: 1,
         height: 640,
         paddingLeft:10,
         paddingRight:10,
         paddingBottom:30,
+        //paddingTop:30,
         justifyContent: 'center',
-      //  backgroundColor: '#d6ca1a',
+      // backgroundColor: '#d6ca1a',
       },
       footer: {
         width:'100%',
         height:'5%',
         alignItems: 'flex-end',
+        paddingBottom:10,
       //  backgroundColor: '#1ad657',
+      },
+      test: {
+        flex: 1,
+        backgroundColor: theme.background,
+        width: '100%',
+        alignItems: 'center',
+        justifyContent:'flex-start',
       }
   });
   
