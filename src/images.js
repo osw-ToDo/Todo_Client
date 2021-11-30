@@ -17,5 +17,4 @@ export const images = {
     add: Add,
     off: Off,
     on: On,
-
 };
