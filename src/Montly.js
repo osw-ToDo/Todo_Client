@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import {View, ToastAndroid} from 'react-native';
-import{Montlystyles} from './styles';
+import {StatusBar, View, ToastAndroid} from 'react-native';
+import{Montlystyles,viewStyles,textStyles,iconStyles} from './styles';
 import {Calendar} from 'react-native-calendars';
 import {LocaleConfig} from 'react-native-calendars';
 import { theme } from './theme';
+import IconButton from './components/IconButton';
+import {images} from './images';
 
 LocaleConfig.locales['ko'] = {
   monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
@@ -18,9 +20,14 @@ class App extends Component {
   render() {
      return (
         <View style={Montlystyles.container}>
+          
+          <StatusBar barStyle="light-content" style={textStyles.statusBar}/>
+          <View style = {viewStyles.header}>
+            <IconButton  type = {images.back}/>  
+          </View>
+
             <View style={Montlystyles.wrapper}>
             <Calendar style={{height:500, width:400}}
-            
               onDayPress={(day) => {console.log('selected day', day)
                                 ToastAndroid.showWithGravity(
                                     day.dateString,
@@ -83,8 +90,13 @@ class App extends Component {
                   alignItems:'center'
                 }
               }
-          }}
-              />
+            }}
+            />
+              <View style = {viewStyles.footer}> 
+              <View style = {iconStyles.done}>
+              <IconButton  type = {images.done}/>
+              </View> 
+              </View> 
             </View>
         </View>
      );

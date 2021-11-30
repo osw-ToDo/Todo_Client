@@ -60,6 +60,7 @@ export const textStyles = StyleSheet.create({
 
 export const Montlystyles = StyleSheet.create({
     container: {
+        flex:1,
         backgroundColor: theme.background,
         alignItems: "center",
         paddingHorizontal: 20,
@@ -67,7 +68,6 @@ export const Montlystyles = StyleSheet.create({
     wrapper: {
         backgroundColor:theme.background,
         alignItems: "center",
-        top: 70,
         padding: 20
     },
     title: {
