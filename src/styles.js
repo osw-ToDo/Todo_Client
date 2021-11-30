@@ -35,6 +35,14 @@ export const textStyles = StyleSheet.create({
         marginTop: 10,
         marginLeft: 0,
     },
+    main: {
+        fontSize:17,
+        fontWeight: '500',
+        color: theme.main,
+        alignItems: 'flex-start',
+        marginTop:20,
+        marginLeft: 20,
+    },
     
 });
 
