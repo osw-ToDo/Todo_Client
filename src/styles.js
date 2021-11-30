@@ -22,43 +22,10 @@ export const viewStyles=StyleSheet.create({
     box2:{
         marginLeft:240,
         flexDirection: 'row',
-    },
+    }
     
+});
 
-    header: {
-        width:'100%',
-        
-        height:50,
-        backgroundColor: theme.background,
-        
-        //backgroundColor: '#ff9a9a',
-      },
-      content: {
-       // flex: 1,
-        height: 640,
-        paddingLeft:10,
-        paddingRight:10,
-        paddingBottom:30,
-        //paddingTop:30,
-        justifyContent: 'center',
-      // backgroundColor: '#d6ca1a',
-      },
-      footer: {
-        width:'100%',
-        height:'5%',
-        alignItems: 'flex-end',
-        paddingBottom:10,
-      //  backgroundColor: '#1ad657',
-      },
-      test: {
-        flex: 1,
-        backgroundColor: theme.background,
-        width: '100%',
-        alignItems: 'center',
-        justifyContent:'flex-start',
-      }
-  });
-  
 export const textStyles = StyleSheet.create({
     title: {
         fontSize:30,
