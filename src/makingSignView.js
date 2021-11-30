@@ -30,7 +30,7 @@ const App= () => {
       </View>
  
      <View style = {viewStyles.footer}> 
-     <View style = {iconStyles.done}>
+     <View>
       <IconButton  type = {images.done}/>
      </View> 
      </View> 

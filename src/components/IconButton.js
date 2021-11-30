@@ -25,26 +25,17 @@ export const PicButton= ({type, onPressOut}) => {
   );
 };
 
-export const PicButton= ({type, onPressOut}) => {
-
-  return (
-    <Pressable onPressOut = {onPressOut}>
-        <Image source = {type} style = {iconStyle.pic}/>
-    </Pressable>
-   
-  );
-};
 
 const iconStyle = StyleSheet.create({
     icon: {
-        tintColor: theme.text,
+        tintColor: 'black',
         width: 30,
         height: 30,
         margin: 10,
         resizeMode: 'contain', 
     },
     pic: {
-      tintColor: theme.text,
+      tintColor: 'black',
       width: 50,
       height: 50,
       margin: 5,
