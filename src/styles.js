@@ -56,4 +56,29 @@ export const textStyles = StyleSheet.create({
     marginBottom : 5,
     marginRight : 5
     },
+});
+
+export const Montlystyles = StyleSheet.create({
+    container: {
+        backgroundColor: theme.background,
+        alignItems: "center",
+        paddingHorizontal: 20,
+    },
+    wrapper: {
+        backgroundColor:theme.background,
+        alignItems: "center",
+        top: 70,
+        padding: 20
+    },
+    title: {
+        fontSize: 23,
+        fontWeight: "bold",
+        color: "#848484",
+        marginBottom: 10,
+    },
+    subtitle: {
+        fontSize: 15,
+        color: "gray",
+    },
   });
+  
