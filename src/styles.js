@@ -9,6 +9,7 @@ export const viewStyles = StyleSheet.create({
       alignItems: 'center',
       justifyContent:'flex-start',
     },
+<<<<<<< HEAD
     header: {
         width:'100%',
         height:50,
@@ -31,6 +32,26 @@ export const viewStyles = StyleSheet.create({
       }
   });
   
+=======
+    card:{
+        backgroundColor: '#fff',
+        flex:1,
+        borderRadius:10,
+        margin:20,
+        width:340,
+    },
+    box: {
+        marginLeft:290,
+        flexDirection: 'row',
+    },
+    box2:{
+        marginLeft:240,
+        flexDirection: 'row',
+    }
+    
+});
+
+>>>>>>> f5ab27f (TodoList)
 export const textStyles = StyleSheet.create({
     title: {
       fontSize: 40,
