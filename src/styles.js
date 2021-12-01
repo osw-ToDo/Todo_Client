@@ -35,7 +35,7 @@ export const viewStyles=StyleSheet.create({
       },
       content: {
        // flex: 1,
-        height: 640,
+        height: 610,
         paddingLeft:10,
         paddingRight:10,
         paddingBottom:30,
@@ -45,10 +45,10 @@ export const viewStyles=StyleSheet.create({
       },
       footer: {
         width:'100%',
-        height:'5%',
+        height:'10%',
         alignItems: 'flex-end',
-        paddingBottom:10,
-      //  backgroundColor: '#1ad657',
+        paddingBottom:50,
+        // backgroundColor: '#1ad657',
       },
       test: {
         flex: 1,
@@ -76,3 +76,28 @@ export const barStyles = StyleSheet.create({
         backgroundColor: theme.background,
     },
 });
+
+export const Montlystyles = StyleSheet.create({
+    container: {
+        flex:1,
+        backgroundColor: theme.background,
+        alignItems: "center",
+        paddingHorizontal: 20,
+    },
+    wrapper: {
+        backgroundColor:theme.background,
+        alignItems: "center",
+        padding: 20
+    },
+    title: {
+        fontSize: 23,
+        fontWeight: "bold",
+        color: "#848484",
+        marginBottom: 10,
+    },
+    subtitle: {
+        fontSize: 15,
+        color: "gray",
+    },
+  });
+  
