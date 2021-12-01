@@ -10,9 +10,9 @@ import Category from '../components/Category';
 
 
 //const [newTask, setNewTask]=useState('');
-const _handleTextChange = text =>{
+/*const _handleTextChange = text =>{
     setNewTask(text);
-};
+};*/
 
 const Task = () => {
     return(
@@ -69,8 +69,8 @@ const taskStyles=StyleSheet.create({
     },
 });
 
-Task.propTypes = {
+/*Task.propTypes = {
     text:PropTypes.string.isRequired,
-};
+};*/
 
 export default Task;
