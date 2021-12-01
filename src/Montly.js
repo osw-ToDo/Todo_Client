@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import {StatusBar, View, ToastAndroid} from 'react-native';
 import{Montlystyles,viewStyles,textStyles,iconStyles} from './styles';
-import {Calendar} from 'react-native-calendars';
-import {LocaleConfig} from 'react-native-calendars';
+import {Calendar,LocaleConfig} from 'react-native-calendars';
 import { theme } from './theme';
-import IconButton from './components/IconButton';
+import {IconButton} from './components/IconButton';
 import {images} from './images';
 
 LocaleConfig.locales['ko'] = {
@@ -92,11 +91,6 @@ class App extends Component {
               }
             }}
             />
-              <View style = {viewStyles.footer}> 
-              <View style = {iconStyles.done}>
-              <IconButton  type = {images.done}/>
-              </View> 
-              </View> 
             </View>
         </View>
      );
