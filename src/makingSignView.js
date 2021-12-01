@@ -1,25 +1,27 @@
 import React from 'react';
-import { StyleSheet,StatusBar,SafeAreaView, Text, View, Keyboard ,Button } from 'react-native';
+import { StyleSheet,StatusBar,SafeAreaView, Text, View, Keyboard ,Button,BackHandler } from 'react-native';
 import { viewStyles, textStyles,  iconStyles } from './styles';
 import EventInput from './EventInput';
 import { TouchableWithoutFeedback } from 'react-native';
-import Input from './components/signInput';
+import {Input} from './components/signInput';
 import {images} from './images';
-import {IconButton} from './components/IconButton';
+// import {IconButton} from './components/IconButton';
 import TrafficSign from './components/J_trafficSign';
 import J_List from './components/J_List';
 import { NavigationContainer } from '@react-navigation/native';
+import { IconButton} from 'react-native-paper';
+import { goBack } from './J_index';
+const makeSign= ({ navigation, route }) => {
 
-const makeSign= ({ navigation }) => {
-
+ 
+ 
   return (
 
 
         <SafeAreaView style={viewStyles.container}>
           <StatusBar barStyle="light-content" style={textStyles.statusBar} />
           <View style={viewStyles.header}>
-            <IconButton type={images.back}  />
-            
+            <IconButton icon={images.back} onPress={ () => {goBack({navigation});}}/>
           </View>
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View style={viewStyles.content}>
@@ -33,11 +35,11 @@ const makeSign= ({ navigation }) => {
           
           <View style={viewStyles.footer}>
             <View>
-            <Button
+            {/* <Button
       title="Go to Jane's profile"
       onPress={() => navigation.navigate('showSign')}
-    />
-              <IconButton type={images.done}  onPress={() => navigation.navigate('showSign')}/>
+    /> */}
+              <IconButton icon={images.done} onPress={() => navigation.navigate('showSign') }/>
             </View>
           </View>
 
@@ -47,6 +49,8 @@ const makeSign= ({ navigation }) => {
     
   );
 }
+
+
 
 
 export default makeSign;

@@ -1,11 +1,18 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer } from '@react-navigation/native';
 import makeSign from './makingSignView';
 import showSign from './showingSignView';
 import * as React from 'react';
-import { StyleSheet,StatusBar,SafeAreaView, Text, View, Keyboard ,Button } from 'react-native';
+import { StyleSheet,StatusBar,SafeAreaView, Text, View, Keyboard ,Button,BackHandler } from 'react-native';
 
 const Stack = createStackNavigator();
+
+export function goBack({navigation}) {
+  if ( navigation.canGoBack() )
+  navigation.goBack();
+  else
+  BackHandler.exitApp();
+
+};
 
 function RootStack() {
   return (
@@ -34,6 +41,8 @@ function RootStack() {
   );
 }
 
+
+//params example
 const HomeScreen = ({ navigation }) => {
   return (
     <Button

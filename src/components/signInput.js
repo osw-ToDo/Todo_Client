@@ -4,7 +4,7 @@ import { Box, Dimensions, StyleSheet, Text, TextInput,Image,View} from 'react-na
 import { theme } from "../theme";
 import { images } from '../images';
 
-const Input= () => {
+export const Input= () => {
   let time = new Date()
   let todayDate = time.getDate()
   let todayDay = time.getDay()
@@ -20,13 +20,39 @@ const Input= () => {
       <Text style = {inputStyles.dayOfWeek}>{dayOfWeek}</Text>
      </View>
 
-      <TextInput style = {inputStyles.textInput} multiline={true}>
+      <TextInput style = {inputStyles.textInput} multiline={true} >
       </TextInput>
       </View>
       </>
    
   );
 };
+
+
+export const SignText= () => {
+  let time = new Date()
+  let todayDate = time.getDate()
+  let todayDay = time.getDay()
+
+  const week= ['SUN','MON','TUE','WED','THU','FRI','SAT']
+  let dayOfWeek = week[todayDay]
+//<TextInput value ="a" editable = {false} style={inputStyles.dayText} multiline={true}></TextInput>
+  return (
+    <>
+      <View style = {inputStyles.box}>
+      <View style ={inputStyles.date}>
+      <View  style ={inputStyles.underline}><Text style ={inputStyles.dayText}>{todayDate}</Text></View>
+      <Text style = {inputStyles.dayOfWeek}>{dayOfWeek}</Text>
+     </View>
+
+      <Text style = {inputStyles.textInput} multiline={true} >
+      </Text>
+      </View>
+      </>
+   
+  );
+};
+
 
 
 
@@ -88,5 +114,5 @@ export const inputStyles = StyleSheet.create({
   });
 
 
-export default Input;
+
 

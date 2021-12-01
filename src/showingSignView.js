@@ -3,13 +3,17 @@ import { StyleSheet,StatusBar,SafeAreaView, Text, View, Keyboard  } from 'react-
 import { viewStyles, textStyles,  iconStyles } from './styles';
 import EventInput from './EventInput';
 import { TouchableWithoutFeedback } from 'react-native';
-import Input from './components/signInput';
+import {Input,SignText} from './components/signInput';
 import {images} from './images';
-import {IconButton} from './components/IconButton';
+// import {IconButton} from './components/IconButton';
 import TrafficSign from './components/J_trafficSign';
 import J_List from './components/J_List';
+import { IconButton} from 'react-native-paper';
+import { goBack } from './J_index';
 
 const showSign= ({navigation}) => {
+
+
 
   return (
 
@@ -18,13 +22,13 @@ const showSign= ({navigation}) => {
     <SafeAreaView style={viewStyles.container}>
       <StatusBar barStyle="light-content" style={textStyles.statusBar}/>
       <View style = {viewStyles.header}>
-      <IconButton  type = {images.back}/>  
+      <IconButton  icon = {images.back} onPress ={() => {goBack({navigation});}}/>  
       </View>
      
       <View style = {viewStyles.content}> 
       
       <Text style={textStyles.title}>Today's Sign</Text>
-      <Input/>
+      <SignText/>
 
       <TrafficSign doneListNum = {5} totalListNum = {115}/>
      { //<View style={viewStyles.test}><J_List/></View>
@@ -33,8 +37,7 @@ const showSign= ({navigation}) => {
  
      <View style = {viewStyles.footer}> 
      <View >
-     <IconButton  type = {images.edit}/>
-      <IconButton  type = {images.done}/>
+       <IconButton  icon = {images.edit}onPress={() => navigation.navigate('makeSign')}/>
      </View> 
      </View> 
       
