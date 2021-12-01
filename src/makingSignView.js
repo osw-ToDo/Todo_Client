@@ -33,10 +33,7 @@ const makeSign= ({ navigation }) => {
           
           <View style={viewStyles.footer}>
             <View>
-            <Button
-      title="Go to Jane's profile"
-      onPress={() => navigation.navigate('showSign')}
-    />
+            
               <IconButton type={images.done}  onPress={() => navigation.navigate('showSign')}/>
             </View>
           </View>
