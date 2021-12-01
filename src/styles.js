@@ -76,3 +76,28 @@ export const barStyles = StyleSheet.create({
         backgroundColor: theme.background,
     },
 });
+
+export const Montlystyles = StyleSheet.create({
+    container: {
+        flex:1,
+        backgroundColor: theme.background,
+        alignItems: "center",
+        paddingHorizontal: 20,
+    },
+    wrapper: {
+        backgroundColor:theme.background,
+        alignItems: "center",
+        padding: 20
+    },
+    title: {
+        fontSize: 23,
+        fontWeight: "bold",
+        color: "#848484",
+        marginBottom: 10,
+    },
+    subtitle: {
+        fontSize: 15,
+        color: "gray",
+    },
+  });
+  
