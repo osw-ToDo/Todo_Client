@@ -9,7 +9,7 @@ import {IconButton} from './components/IconButton';
 import TrafficSign from './components/J_trafficSign';
 import J_List from './components/J_List';
 
-const showSign= ({navigation}) => {
+const App= () => {
 
   return (
 
@@ -25,15 +25,12 @@ const showSign= ({navigation}) => {
       
       <Text style={textStyles.title}>Today's Sign</Text>
       <Input/>
-
       <TrafficSign doneListNum = {5} totalListNum = {115}/>
-     { //<View style={viewStyles.test}><J_List/></View>
-     }
+      <View style={viewStyles.test}><J_List/></View>
       </View>
  
      <View style = {viewStyles.footer}> 
-     <View >
-     <IconButton  type = {images.edit}/>
+     <View style = {iconStyles.done}>
       <IconButton  type = {images.done}/>
      </View> 
      </View> 
@@ -46,5 +43,5 @@ const showSign= ({navigation}) => {
 }
 
 
-export default showSign;
+export default App;
 

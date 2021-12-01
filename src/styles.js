@@ -35,7 +35,7 @@ export const viewStyles=StyleSheet.create({
       },
       content: {
        // flex: 1,
-        height: 610,
+        height: 640,
         paddingLeft:10,
         paddingRight:10,
         paddingBottom:30,
@@ -45,10 +45,10 @@ export const viewStyles=StyleSheet.create({
       },
       footer: {
         width:'100%',
-        height:'10%',
+        height:'5%',
         alignItems: 'flex-end',
-        paddingBottom:50,
-        // backgroundColor: '#1ad657',
+        paddingBottom:10,
+      //  backgroundColor: '#1ad657',
       },
       test: {
         flex: 1,
