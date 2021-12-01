@@ -1,8 +1,7 @@
 
 import React from 'react';
-import { Box, Dimensions, StyleSheet, Text, TextInput,Image,View} from 'react-native';
+import { Dimensions, StyleSheet, Text, TextInput} from 'react-native';
 import { theme } from "../theme";
-import { images } from '../images';
 
 const Input= () => {
   let time = new Date()
@@ -14,15 +13,12 @@ const Input= () => {
 //<TextInput value ="a" editable = {false} style={inputStyles.dayText} multiline={true}></TextInput>
   return (
     <>
-      <View style = {inputStyles.box}>
-      <View style ={inputStyles.date}>
-      <View  style ={inputStyles.underline}><Text style ={inputStyles.dayText}>{todayDate}</Text></View>
-      <Text style = {inputStyles.dayOfWeek}>{dayOfWeek}</Text>
-     </View>
-
-      <TextInput style = {inputStyles.textInput} multiline={true}>
+      <TextInput style={inputStyles.textInput} multiline={true}>
+      
+      <Text  style ={inputStyles.underline}>{todayDate}</Text>      
+      <Text  style = {inputStyles.dayOfWeek}>{"\n"}{dayOfWeek}{"\n"}</Text>
       </TextInput>
-      </View>
+     
       </>
    
   );
@@ -32,42 +28,6 @@ const Input= () => {
 
 export const inputStyles = StyleSheet.create({
     textInput: {
-      fontSize: 25,
-      width: Dimensions.get('window').width-80,
-      height: 280, 
-      alignContent: 'center',
-      textAlign: 'left',
-      textAlignVertical: 'top',
-      marginTop: 10,
-      paddingLeft:5,
-      paddingRight:15,
-      paddingTop: 5, 
-      
-      backgroundColor: theme.itmeBackground,
-      color: theme.text, 
-      
-    
-    },
-    underline: { //textDecorationLine: 'underline',
-    width : 35,
-    borderBottomWidth : 1,
-    borderBottomColor : 'black',
-    alignContent: 'center',
-    textAlign: 'center',
-    },
-    date: { //textDecorationLine: 'underline',
-      width : 35,
-      alignContent: 'center',
-      textAlign: 'center',
-    // backgroundColor: 'yellow',
-      },
-    dayOfWeek: {fontSize : 15,
-      textAlign: 'center'},
-    dayText: {
-      textAlign: 'center',
-      fontSize : 20
-    },
-    box: {
       fontSize: 25,
       width: Dimensions.get('window').width -40,
       height: 365, 
@@ -83,6 +43,17 @@ export const inputStyles = StyleSheet.create({
       color: theme.text, 
       borderWidth:3,
       borderColor: theme.text
+    
+    },
+    underline: { textDecorationLine: 'underline',
+    
+    borderBottomWidth : 3,
+    borderBottomColor : 'black',
+    alignContent: 'center',
+    textAlign: 'center',
+    },
+    dayOfWeek: {fontSize : 15},
+    dayText: {
 
     }
   });
