@@ -5,11 +5,12 @@ import PropTypes from 'prop-types';
 import { images } from '../images';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
+
 export const IconButton= ({type, onPressOut}) => {
 
     
     return (
-        <Pressable onPressOut={onPressOut}>
+        <Pressable onPress={onPressOut}>
             <Image source={type} style={iconStyle.icon}/>
         </Pressable>
     );
@@ -18,7 +19,7 @@ export const IconButton= ({type, onPressOut}) => {
 export const PicButton= ({type, onPressOut}) => {
 
   return (
-    <Pressable onPressOut = {onPressOut}>
+    <Pressable onPress = {onPressOut}>
         <Image source = {type} style = {iconStyle.pic}/>
     </Pressable>
    

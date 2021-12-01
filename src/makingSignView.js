@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet,StatusBar,SafeAreaView, Text, View, Keyboard  } from 'react-native';
+import { StyleSheet,StatusBar,SafeAreaView, Text, View, Keyboard ,Button } from 'react-native';
 import { viewStyles, textStyles,  iconStyles } from './styles';
 import EventInput from './EventInput';
 import { TouchableWithoutFeedback } from 'react-native';
@@ -8,40 +8,46 @@ import {images} from './images';
 import {IconButton} from './components/IconButton';
 import TrafficSign from './components/J_trafficSign';
 import J_List from './components/J_List';
+import { NavigationContainer } from '@react-navigation/native';
 
-const App= () => {
+const makeSign= ({ navigation }) => {
 
   return (
 
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-   
-    <SafeAreaView style={viewStyles.container}>
-      <StatusBar barStyle="light-content" style={textStyles.statusBar}/>
-      <View style = {viewStyles.header}>
-      <IconButton  type = {images.back}/>  
-      </View>
+
+        <SafeAreaView style={viewStyles.container}>
+          <StatusBar barStyle="light-content" style={textStyles.statusBar} />
+          <View style={viewStyles.header}>
+            <IconButton type={images.back}  />
+            
+          </View>
+          <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+          <View style={viewStyles.content}>
+
+            <Text style={textStyles.title}>Today's Sign</Text>
+            <Input />
+            <TrafficSign doneListNum={5} totalListNum={115} />
+            <View style={viewStyles.test}><J_List /></View>
+          </View>
+          </TouchableWithoutFeedback>
+          
+          <View style={viewStyles.footer}>
+            <View>
+            <Button
+      title="Go to Jane's profile"
+      onPress={() => navigation.navigate('showSign')}
+    />
+              <IconButton type={images.done}  onPress={() => navigation.navigate('showSign')}/>
+            </View>
+          </View>
+
+        </SafeAreaView>
      
-      <View style = {viewStyles.content}> 
-      
-      <Text style={textStyles.title}>Today's Sign</Text>
-      <Input/>
-      <TrafficSign doneListNum = {5} totalListNum = {115}/>
-      <View style={viewStyles.test}><J_List/></View>
-      </View>
- 
-     <View style = {viewStyles.footer}> 
-     <View>
-      <IconButton  type = {images.done}/>
-     </View> 
-     </View> 
-      
-    </SafeAreaView>
-    </TouchableWithoutFeedback>
 
     
   );
 }
 
 
-export default App;
+export default makeSign;
 

@@ -23,8 +23,8 @@ import selectedPic5 from '../assets/selectedPic5.png';
 import bar from '../assets/TodayBar.png';
 
 export const images = {
-    done: check ,
-    back : back,
+    done: check , // 사용 X -> submit으로 통일
+    back : back, // 뒤로가기
     redSign :red,
     yellowSign:yellow,
     greenSign:green,
@@ -42,11 +42,11 @@ export const images = {
 
     bar: bar,
 
-    submit: SubmitBtn,
+    submit: SubmitBtn, // 제출 
     uncompleted: UnBox,
     completed:Box,
-    delete: Delete,
-    edit: Edit,
+    delete: Delete, 
+    edit: Edit, // 수정
         
     
 }
