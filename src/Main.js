@@ -21,11 +21,11 @@ export default function Main() {
 
       <HeaderTitleView>
         <HeaderTitleTxt>TODAY's LIST</HeaderTitleTxt>
-        <HeaderImg style={{ marign: 100 }} source={require("../../assets/images/mainSetting.png")} />
+        <HeaderImg style={{ marign: 100 }} source={require("../assets/images/mainSetting.png")} />
       </HeaderTitleView>
       <BodyView>
-        <BodySignDateImg source={require("../../assets/images/mainSign.png")} />
-        <BodyMenuImg source={require("../../assets/images/mainMenu.png")} />
+        <BodySignDateImg source={require("../assets/images/mainSign.png")} />
+        <BodyMenuImg source={require("../assets/images/mainMenu.png")} />
       </BodyView>
       <BodyTxtView>
         {mainRows.map((row, idx) => {
@@ -54,8 +54,8 @@ export default function Main() {
         })}
       </BodyTxtView>
       <FooterView>
-        <FooterButtonImg source={require("../../assets/images/mainButton.png")} />
-        <FooterPlusImg source={require("../../assets/images/mainPlus.png")} />
+        <FooterButtonImg source={require("../assets/images/mainButton.png")} />
+        <FooterPlusImg source={require("../assets/images/mainPlus.png")} />
       </FooterView>
     </View>
   );

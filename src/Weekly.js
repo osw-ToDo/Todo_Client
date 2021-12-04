@@ -61,18 +61,18 @@ export default function Weekly() {
         <BodyMonthGroupView>
           <MonthNum>{day3}</MonthNum>
           <MonthTxt>{dayOfWeek3}</MonthTxt>
-          <StyledtrafficSing1Img source={require("../../assets/images/trafficSign_1.png")} />
+          <StyledtrafficSing1Img source={require("../assets/images/trafficSign_1.png")} />
         </BodyMonthGroupView>
         <BodyMonthGroupView>
           <MonthNum>{day4}</MonthNum>
           <MonthTxt>{dayOfWeek4}</MonthTxt>
-          <StyledtrafficSing3Img source={require("../../assets/images/trafficSign_3.png")} />
-          <StyledtrafficSing3_2Img source={require("../../assets/images/trafficSign_3(2).png")} />
+          <StyledtrafficSing3Img source={require("../assets/images/trafficSign_3.png")} />
+          <StyledtrafficSing3_2Img source={require("../assets/images/trafficSign_3(2).png")} />
         </BodyMonthGroupView>
         <BodyMonthGroupView>
           <MonthNum>{day5}</MonthNum>
           <MonthTxt>{dayOfWeek5}</MonthTxt>
-          <StyledtrafficSing1_2Img source={require("../../assets/images/trafficSign_1(2).png")} />
+          <StyledtrafficSing1_2Img source={require("../assets/images/trafficSign_1(2).png")} />
         </BodyMonthGroupView>
         <BodyMonthGroupView>
           <MonthNum>{day6}</MonthNum>
@@ -88,7 +88,7 @@ export default function Weekly() {
         </BodyMonthGroupView>
       </BodyView>
       <FooterView>
-        <FooterPlusImg source={require("../../assets/images/mainPlus.png")} />
+        <FooterPlusImg source={require("../assets/images/mainPlus.png")} />
       </FooterView>
     </View>
   );
