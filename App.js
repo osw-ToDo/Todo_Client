@@ -1,4 +1,4 @@
-import App from './src/CreateToDo';
+import App from './src/Weekly';
 // import React from 'react';
 // import RootStack from './src/J_index.js';
 
