@@ -1,18 +1,56 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
-import Main from "./Main";
-import Weekly from "./Weekly";
+import { StatusBar, Image } from "expo-status-bar";
+import React, {useState} from "react";
+import AppLoading from "expo-app-loading";
+import {Asset} from 'expo-asset';
+import * as Font from 'expo-font';
+import {ThemeProvider} from 'styled-components/native'
+import { theme } from "./theme";
+import { StyleSheet } from "react-native";
+import Navigation from "./navigations";
+import {images} from './utils/images';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      {/*<Main />*/}
-      <Weekly />
-      <StatusBar style="auto" />
-    </View>
+const cacheImages = images => {
+  return images.map(image => {
+    if (typeof image === 'string') {
+      return Image.prefetch(image);
+    } else {
+      return Asset.fromModule(image).downloadAsync();
+    }
+  });
+};
+const cacheFonts = fonts => {
+  return fonts.map(font => Font.loadAsync(font));
+};
+
+
+const App = () => {
+  const [isReady, setIsReady] = useState(false);
+
+  const _loadAssets = async () => {
+    const imageAssets = cacheImages([
+      require('../assets/splash.png'),
+      ...Object.values(images),
+    ]);
+    const fontAssets = cacheFonts([]);
+
+    await Promise.all([...imageAssets, ...fontAssets]);
+  };
+
+  return isReady ? (
+    <ThemeProvider theme={theme}>
+          <StatusBar barStyle="dark-content" />
+          <Navigation />
+    </ThemeProvider>
+  ) : (
+    <AppLoading
+      startAsync={_loadAssets}
+      onFinish={() => setIsReady(true)}
+      onError={console.warn}
+    />
   );
-}
+};
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
