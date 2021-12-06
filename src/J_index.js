@@ -1,6 +1,12 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import makeSign from './makingSignView';
 import showSign from './showingSignView';
+import createToDo from './CreateToDo';
+import montly  from './Montly';
+import Main from "./Main";
+import Weekly from "./Weekly";
+
+
 import * as React from 'react';
 import { StyleSheet,StatusBar,SafeAreaView, Text, View, Keyboard ,Button,BackHandler } from 'react-native';
 
@@ -18,8 +24,14 @@ function RootStack() {
   return (
 
     <Stack.Navigator
-      initialRouteName="makeSign"
+      initialRouteName="main"
     >
+
+      <Stack.Screen
+        name="main"
+        component={MainView}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name="makeSign"
         component={makeSign}
@@ -31,29 +43,60 @@ function RootStack() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ title: 'Welcome' }}
-        />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
+        name="creatToDo"
+        component={createToDo}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="montly"
+        component={montly}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="weekly"
+        component={WeeklyView}
+        options={{ headerShown: false }}
+      />
+    
     </Stack.Navigator>
    
   );
 }
 
-
-//params example
-const HomeScreen = ({ navigation }) => {
+ function WeeklyView() {
   return (
-    <Button
-      title="Go to Jane's profile"
-      onPress={() =>
-        navigation.navigate('Profile', { name: 'Jane' })
-      }
-    />
+    <View style={styles.container}>
+   
+      <Weekly />
+      <StatusBar style="auto" />
+    </View>
   );
-};
-const ProfileScreen = ({ navigation, route }) => {
-  return <Text>This is {route.params.name}'s profile</Text>;
-};
+}
+
+
+function MainView() {
+  return (
+    <View style={styles.container}>
+      <Main />
+ 
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#eee9e0",
+    // margin: 30,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
+
+
+
 export default RootStack;
