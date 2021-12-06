@@ -40,6 +40,7 @@ function RootStack() {
         component={MainView}
         options={{ headerShown: false }}
       />
+      
        <Stack.Screen
         name="weekly"
         component={WeeklyView}
