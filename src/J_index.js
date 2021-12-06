@@ -1,8 +1,15 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import makeSign from './makingSignView';
 import showSign from './showingSignView';
+
 import createToDo from './CreateToDo';
+import modifyToDo from "./ModifyToDo";
+import toDo from './ToDo';
+import category from './Category';
+
 import montly  from './Montly';
+
+
 import Main from "./Main";
 import Weekly from "./Weekly";
 
@@ -32,6 +39,13 @@ function RootStack() {
         component={MainView}
         options={{ headerShown: false }}
       />
+       <Stack.Screen
+        name="weekly"
+        component={WeeklyView}
+        options={{ headerShown: false }}
+      />
+    
+
       <Stack.Screen
         name="makeSign"
         component={makeSign}
@@ -42,6 +56,13 @@ function RootStack() {
         component={showSign}
         options={{ headerShown: false }}
       />
+
+       <Stack.Screen
+        name="montly"
+        component={montly}
+        options={{ headerShown: false }}
+      />
+
       <Stack.Screen
         name="creatToDo"
         component={createToDo}
@@ -49,17 +70,25 @@ function RootStack() {
       />
 
       <Stack.Screen
-        name="montly"
-        component={montly}
+        name="toDo"
+        component={toDo}
         options={{ headerShown: false }}
       />
 
       <Stack.Screen
-        name="weekly"
-        component={WeeklyView}
+        name="modifyToDo"
+        component={modifyToDo}
         options={{ headerShown: false }}
       />
-    
+
+      <Stack.Screen
+        name="category"
+        component={category}
+        options={{ headerShown: false }}
+      />
+     
+     
+     
     </Stack.Navigator>
    
   );
