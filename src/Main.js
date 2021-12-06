@@ -1,10 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image,TouchableOpacity } from "react-native";
 import styled from "styled-components";
 import { mainRows } from "../rows";
 import Icon from "react-native-vector-icons/Ionicons";
+import { IconButton} from 'react-native-paper';
+import {images} from './images';
+import {IconButton as IconBtn} from './components/IconButton';
 
-export default function Main() {
+export default function Main({ navigation }) {
   return (
     <View>
       <View>
@@ -54,8 +57,15 @@ export default function Main() {
         })}
       </BodyTxtView>
       <FooterView>
-        <FooterButtonImg source={require("../assets/images/mainButton.png")} />
-        <FooterPlusImg source={require("../assets/images/mainPlus.png")} />
+        {/* <FooterButtonImg source={require("../assets/images/mainButton.png")} /> */}
+         {/* <IconButton style={FooterButtonImg} icon={require("../assets/images/mainButton.png")} onPress={() => navigation.navigate('makeSign') }/> 
+       */}
+       <TouchableOpacity style = {FooterButtonImg1.icon}  onPress={() => navigation.navigate('showSign') }>
+          <Image style = {FooterButtonImg1.icon} source={require("../assets/images/mainButton.png")}/>
+        </TouchableOpacity>
+        {/* <FooterPlusImg source={require("../assets/images/mainPlus.png")} /> */}
+        <IconButton size = {35} icon={require("../assets/images/mainPlus.png")} onPress={() => navigation.navigate('creatToDo') }/>
+        
       </FooterView>
     </View>
   );
@@ -123,7 +133,28 @@ const FooterButtonImg = styled(Image)`
   width: 35px;
   height: 35px;
   margin: 7px;
+ 
 `;
+
+const FooterButtonImg1 = StyleSheet.create({
+  icon: {
+  
+  
+    margin:7,
+    shadowColor: '#303838',
+    shadowOffset: { width: 0, height: 5 },
+    shadowRadius: 10,
+    shadowOpacity: 0.35,
+    resizeMode : 'contain',
+   
+    width: 35,
+    height: 35,
+
+  },
+});
+
+
+
 
 const MView = styled(View)`
   position: absolute;

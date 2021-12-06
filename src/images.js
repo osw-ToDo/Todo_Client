@@ -25,6 +25,9 @@ import selectedPic5 from '../assets/selectedPic5.png';
 
 import bar from '../assets/TodayBar.png';
 
+import mainButton from "../assets/images/mainButton.png";
+
+
 export const images = {
     done: check , // 사용 X -> submit으로 통일
     back : back, // 뒤로가기
@@ -44,6 +47,8 @@ export const images = {
     sPic5 : selectedPic5,
 
     bar: bar,
+
+    mainButton : mainButton,
 
     submit: SubmitBtn, // 제출 
     uncompleted: UnBox,

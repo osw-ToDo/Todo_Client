@@ -8,9 +8,10 @@ import {images} from './images';
 // import {IconButton} from './components/IconButton';
 import TrafficSign from './components/J_trafficSign';
 import J_List from './components/J_List';
-import { NavigationContainer } from '@react-navigation/native';
+
 import { IconButton} from 'react-native-paper';
 import { goBack } from './J_index';
+
 const makeSign= ({ navigation, route }) => {
 
  

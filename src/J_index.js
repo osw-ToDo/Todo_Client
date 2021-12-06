@@ -14,6 +14,7 @@ import Main from "./Main";
 import Weekly from "./Weekly";
 
 
+
 import * as React from 'react';
 import { StyleSheet,StatusBar,SafeAreaView, Text, View, Keyboard ,Button,BackHandler } from 'react-native';
 
@@ -94,23 +95,22 @@ function RootStack() {
   );
 }
 
- function WeeklyView() {
+ function WeeklyView({navigation}) {
   return (
     <View style={styles.container}>
    
-      <Weekly />
+      <Weekly navigation = {navigation}/>
       <StatusBar style="auto" />
     </View>
   );
 }
 
-
-function MainView() {
+import { IconButton} from 'react-native-paper';
+function MainView({navigation}) {
   return (
     <View style={styles.container}>
-      <Main />
- 
-      <StatusBar style="auto" />
+      <Main navigation = {navigation}/>
+       <StatusBar style="auto" />
     </View>
   );
 }
