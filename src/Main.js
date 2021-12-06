@@ -58,14 +58,15 @@ export default function Main({ navigation }) {
       </BodyTxtView>
       <FooterView>
         {/* <FooterButtonImg source={require("../assets/images/mainButton.png")} /> */}
-         {/* <IconButton style={FooterButtonImg} icon={require("../assets/images/mainButton.png")} onPress={() => navigation.navigate('makeSign') }/> 
-       */}
        <TouchableOpacity style = {FooterButtonImg1.icon}  onPress={() => navigation.navigate('showSign') }>
           <Image style = {FooterButtonImg1.icon} source={require("../assets/images/mainButton.png")}/>
         </TouchableOpacity>
         {/* <FooterPlusImg source={require("../assets/images/mainPlus.png")} /> */}
-        <IconButton size = {35} icon={require("../assets/images/mainPlus.png")} onPress={() => navigation.navigate('creatToDo') }/>
-        
+
+        <TouchableOpacity style = {FooterButtonImg1.icon}  onPress={() => navigation.navigate('creatToDo') }>
+          <Image style = {FooterButtonImg1.icon} source={require("../assets/images/mainPlus.png")}/>
+        </TouchableOpacity>
+       
       </FooterView>
     </View>
   );
@@ -138,8 +139,6 @@ const FooterButtonImg = styled(Image)`
 
 const FooterButtonImg1 = StyleSheet.create({
   icon: {
-  
-  
     margin:7,
     shadowColor: '#303838',
     shadowOffset: { width: 0, height: 5 },
