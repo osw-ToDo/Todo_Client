@@ -7,25 +7,18 @@ import Icon from "react-native-vector-icons/Ionicons";
 export default function Main() {
   return (
     <View>
-      <View>
-        <MView>
-          <Text>M</Text>
-        </MView>
-        <WView>
-          <Text>W</Text>
-        </WView>
-        <CView>
-          <Text>C</Text>
-        </CView>
-      </View>
-
       <HeaderTitleView>
         <HeaderTitleTxt>TODAY's LIST</HeaderTitleTxt>
         <HeaderImg style={{ marign: 100 }} source={require("../assets/images/mainSetting.png")} />
       </HeaderTitleView>
       <BodyView>
         <BodySignDateImg source={require("../assets/images/mainSign.png")} />
-        <BodyMenuImg source={require("../assets/images/mainMenu.png")} />
+        <BodyMenuView>
+          <BodyMMenuImg source={require("../assets/images/Mbutton.png")} /> 
+          <BodyWMenuImg source={require("../assets/images/Wbutton.png")} /> 
+          <BodyCMenuImg source={require("../assets/images/Cbutton.png")} /> 
+        </BodyMenuView>
+        
       </BodyView>
       <BodyTxtView>
         {mainRows.map((row, idx) => {
@@ -101,7 +94,8 @@ const BodySignDateImg = styled(Image)`
   height: 150px;
 `;
 
-const BodyMenuImg = styled(Image)`
+//위치 수정
+const BodyMenuView = styled(Image)`
   width: 150px;
   height: 200px;
 `;
@@ -125,7 +119,8 @@ const FooterButtonImg = styled(Image)`
   margin: 7px;
 `;
 
-const MView = styled(View)`
+//위치 수정
+const BodyMMenuImg = styled(View)`
   position: absolute;
   top: 195px;
   right: 78px;
@@ -133,7 +128,7 @@ const MView = styled(View)`
   font-weight: 700;
 `;
 
-const WView = styled(View)`
+const BodyWMenuImg = styled(View)`
   position: absolute;
   top: 255px;
   right: 78px;
@@ -141,7 +136,7 @@ const WView = styled(View)`
   font-weight: 700;
 `;
 
-const CView = styled(View)`
+const BodyCMenuImg = styled(View)`
   position: absolute;
   top: 315px;
   right: 78px;
