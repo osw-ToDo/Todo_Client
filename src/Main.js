@@ -18,7 +18,6 @@ export default function Main() {
           <BodyWMenuImg source={require("../assets/images/Wbutton.png")} /> 
           <BodyCMenuImg source={require("../assets/images/Cbutton.png")} /> 
         </BodyMenuView>
-        
       </BodyView>
       <BodyTxtView>
         {mainRows.map((row, idx) => {
