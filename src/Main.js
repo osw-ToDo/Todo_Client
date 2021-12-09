@@ -10,17 +10,25 @@ import {IconButton as IconBtn} from './components/IconButton';
 export default function Main({ navigation }) {
   return (
     <View>
+      <View>
+        <MView>
+          <Text>M</Text>
+        </MView>
+        <WView>
+          <Text>W</Text>
+        </WView>
+        <CView>
+          <Text>C</Text>
+        </CView>
+      </View>
+
       <HeaderTitleView>
         <HeaderTitleTxt>TODAY's LIST</HeaderTitleTxt>
         <HeaderImg style={{ marign: 100 }} source={require("../assets/images/mainSetting.png")} />
       </HeaderTitleView>
       <BodyView>
         <BodySignDateImg source={require("../assets/images/mainSign.png")} />
-        <BodyMenuView>
-          <BodyMMenuImg source={require("../assets/images/Mbutton.png")} /> 
-          <BodyWMenuImg source={require("../assets/images/Wbutton.png")} /> 
-          <BodyCMenuImg source={require("../assets/images/Cbutton.png")} /> 
-        </BodyMenuView>
+        <BodyMenuImg source={require("../assets/images/mainMenu.png")} />
       </BodyView>
       <BodyTxtView>
         {mainRows.map((row, idx) => {
@@ -104,8 +112,7 @@ const BodySignDateImg = styled(Image)`
   height: 150px;
 `;
 
-//위치 수정
-const BodyMenuView = styled(Image)`
+const BodyMenuImg = styled(Image)`
   width: 150px;
   height: 200px;
 `;
@@ -148,9 +155,7 @@ const FooterButtonImg1 = StyleSheet.create({
 
 
 
-
-//위치 수정
-const BodyMMenuImg = styled(View)`
+const MView = styled(View)`
   position: absolute;
   top: 195px;
   right: 78px;
@@ -158,7 +163,7 @@ const BodyMMenuImg = styled(View)`
   font-weight: 700;
 `;
 
-const BodyWMenuImg = styled(View)`
+const WView = styled(View)`
   position: absolute;
   top: 255px;
   right: 78px;
@@ -166,7 +171,7 @@ const BodyWMenuImg = styled(View)`
   font-weight: 700;
 `;
 
-const BodyCMenuImg = styled(View)`
+const CView = styled(View)`
   position: absolute;
   top: 315px;
   right: 78px;

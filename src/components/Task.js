@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import { View, StyleSheet, Text} from 'react-native';
 import {theme } from '../theme';
-import TodoInput from '../components/TodoInput';
+import PropTypes from 'prop-types';
+import Input from '../components/Input';
 import {images} from '../images';
 import {IconButton} from '../components/IconButton';
 import Day from '../components/Date';
@@ -30,7 +31,7 @@ const Task = () => {
                 </View>
                 <View style={taskStyles.container}>
                 <Text style={taskStyles.text}>To-do:</Text>
-                <TodoInput/>
+                <Input/>
                 </View>
                 <View style={taskStyles.column}>
                 <Text style={taskStyles.text}>Completed:</Text>
