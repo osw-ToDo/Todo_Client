@@ -14,9 +14,9 @@ export default function Main() {
       <BodyView>
         <BodySignDateImg source={require("../assets/images/mainSign.png")} />
         <BodyMenuView>
-          <BodyMMenuImg source={require("../assets/images/Mbutton.png")} /> 
+          {/* <BodyMMenuImg source={require("../assets/images/Mbutton.png")} /> 
           <BodyWMenuImg source={require("../assets/images/Wbutton.png")} /> 
-          <BodyCMenuImg source={require("../assets/images/Cbutton.png")} /> 
+          <BodyCMenuImg source={require("../assets/images/Cbutton.png")} />  */}
         </BodyMenuView>
       </BodyView>
       <BodyTxtView>
