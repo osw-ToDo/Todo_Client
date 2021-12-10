@@ -19,9 +19,13 @@ export default function Main({ navigation }) {
       <BodyView>
         <BodySignDateImg source={require("../assets/images/mainSign.png")} />
         <BodyMenuView>
-          <BodyMMenuImg source={require("../assets/images/Mbutton.png")} /> 
+          {/* <BodyMMenuImg source={require("../assets/images/Mbutton.png")} /> 
           <BodyWMenuImg source={require("../assets/images/Wbutton.png")} /> 
-          <BodyCMenuImg source={require("../assets/images/Cbutton.png")} /> 
+          <BodyCMenuImg source={require("../assets/images/Cbutton.png")} />  */}
+
+          <TouchableOpacity style = {BodyMMenuImg}  onPress={() => navigation.navigate('showSign') }>
+          <Image style = {BodyMMenuImg} source={require("../assets/images/Mbutton.png")}/>
+          </TouchableOpacity>
         </BodyMenuView>
       </BodyView>
       <BodyTxtView>
@@ -147,7 +151,10 @@ const FooterButtonImg1 = StyleSheet.create({
 });
 
 
-
+const BodyMenuView = styled(View)`
+  width: 150px;
+  height: 200px;
+`;
 
 const BodyMMenuImg = styled(View)`
   position: absolute;
@@ -155,6 +162,7 @@ const BodyMMenuImg = styled(View)`
   right: 78px;
   z-index: 1;
   font-weight: 700;
+  object-fit: cover;
 `;
 
 const BodyWMenuImg = styled(View)`
