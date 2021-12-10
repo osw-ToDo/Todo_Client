@@ -37,7 +37,7 @@ const showSign= ({navigation}) => {
  
      <View style = {viewStyles.footer}> 
      <View >
-       <IconButton  icon = {images.edit} onPress={() => navigation.navigate('makeSign')}/>
+       <IconButton  icon = {images.edit}onPress={() => navigation.navigate('makeSign')}/>
      </View> 
      </View> 
       

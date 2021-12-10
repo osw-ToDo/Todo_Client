@@ -1,27 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View, Image,TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import styled from "styled-components";
 import { mainRows } from "../rows";
 import Icon from "react-native-vector-icons/Ionicons";
-import { IconButton} from 'react-native-paper';
-import {images} from './images';
-import {IconButton as IconBtn} from './components/IconButton';
 
-export default function Main({ navigation }) {
+export default function Main() {
   return (
     <View>
-      <View>
-        <MView>
-          <Text>M</Text>
-        </MView>
-        <WView>
-          <Text>W</Text>
-        </WView>
-        <CView>
-          <Text>C</Text>
-        </CView>
-      </View>
-
       <HeaderTitleView>
         <HeaderTitleTxt>TODAY's LIST</HeaderTitleTxt>
         <HeaderImg style={{ marign: 100 }} source={require("../assets/images/mainSetting.png")} />
@@ -61,16 +46,8 @@ export default function Main({ navigation }) {
         })}
       </BodyTxtView>
       <FooterView>
-        {/* <FooterButtonImg source={require("../assets/images/mainButton.png")} /> */}
-       <TouchableOpacity style = {FooterButtonImg1.icon}  onPress={() => navigation.navigate('showSign') }>
-          <Image style = {FooterButtonImg1.icon} source={require("../assets/images/mainButton.png")}/>
-        </TouchableOpacity>
-        {/* <FooterPlusImg source={require("../assets/images/mainPlus.png")} /> */}
-
-        <TouchableOpacity style = {FooterButtonImg1.icon}  onPress={() => navigation.navigate('creatToDo') }>
-          <Image style = {FooterButtonImg1.icon} source={require("../assets/images/mainPlus.png")}/>
-        </TouchableOpacity>
-       
+        <FooterButtonImg source={require("../assets/images/mainButton.png")} />
+        <FooterPlusImg source={require("../assets/images/mainPlus.png")} />
       </FooterView>
     </View>
   );
@@ -116,7 +93,8 @@ const BodySignDateImg = styled(Image)`
   height: 150px;
 `;
 
-const BodyMenuImg = styled(Image)`
+//위치 수정
+const BodyMenuView = styled(Image)`
   width: 150px;
   height: 200px;
 `;
@@ -138,28 +116,10 @@ const FooterButtonImg = styled(Image)`
   width: 35px;
   height: 35px;
   margin: 7px;
- 
 `;
 
-const FooterButtonImg1 = StyleSheet.create({
-  icon: {
-    margin:7,
-    shadowColor: '#303838',
-    shadowOffset: { width: 0, height: 5 },
-    shadowRadius: 10,
-    shadowOpacity: 0.35,
-    resizeMode : 'contain',
-   
-    width: 35,
-    height: 35,
-
-  },
-});
-
-
-
-
-const MView = styled(View)`
+//위치 수정
+const BodyMMenuImg = styled(View)`
   position: absolute;
   top: 195px;
   right: 78px;
@@ -167,7 +127,7 @@ const MView = styled(View)`
   font-weight: 700;
 `;
 
-const WView = styled(View)`
+const BodyWMenuImg = styled(View)`
   position: absolute;
   top: 255px;
   right: 78px;
@@ -175,7 +135,7 @@ const WView = styled(View)`
   font-weight: 700;
 `;
 
-const CView = styled(View)`
+const BodyCMenuImg = styled(View)`
   position: absolute;
   top: 315px;
   right: 78px;
