@@ -5,11 +5,13 @@ import {Asset} from 'expo-asset';
 import * as Font from 'expo-font';
 import {ThemeProvider} from 'styled-components/native'
 import { theme } from "./theme";
-import { StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import Navigation from "./navigations";
 import {images} from './utils/images';
+import Main from "./Main";
+import Weekly from "./Weekly";
 
-const cacheImages = images => {
+{/*const cacheImages = images => {
   return images.map(image => {
     if (typeof image === 'string') {
       return Image.prefetch(image);
@@ -50,7 +52,19 @@ const App = () => {
   );
 };
 
-export default App;
+export default App; */}
+
+//Main & Weekly -> 사용하실 때 주식처리 해주세요! 
+
+export default function App(){
+  return (
+    <View style={styles.container}>
+        <Main />
+        {/*<Weekly /> */}
+        <StatusBar style="auto" />
+    </View>
+  )
+}
 
 const styles = StyleSheet.create({
   container: {

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {StatusBar, View, SafeAreaView, Text, ScrollView} from 'react-native';
 import {viewStyles, textStyles } from './styles';
-import Input from './components/Input';
 import {images} from './images';
 import {IconButton} from './components/IconButton';
 import Task from './components/Task';
