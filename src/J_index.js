@@ -1,6 +1,20 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import makeSign from './makingSignView';
 import showSign from './showingSignView';
+
+import createToDo from './CreateToDo';
+import modifyToDo from "./ModifyToDo";
+import toDo from './ToDo';
+import category from './Category';
+
+import montly  from './Montly';
+
+
+import Main from "./Main";
+import Weekly from "./Weekly";
+
+
+
 import * as React from 'react';
 import { StyleSheet,StatusBar,SafeAreaView, Text, View, Keyboard ,Button,BackHandler } from 'react-native';
 
@@ -18,8 +32,22 @@ function RootStack() {
   return (
 
     <Stack.Navigator
-      initialRouteName="makeSign"
+      initialRouteName="main"
     >
+
+      <Stack.Screen
+        name="main"
+        component={MainView}
+        options={{ headerShown: false }}
+      />
+      
+       <Stack.Screen
+        name="weekly"
+        component={WeeklyView}
+        options={{ headerShown: false }}
+      />
+    
+
       <Stack.Screen
         name="makeSign"
         component={makeSign}
@@ -30,30 +58,75 @@ function RootStack() {
         component={showSign}
         options={{ headerShown: false }}
       />
+
+       <Stack.Screen
+        name="montly"
+        component={montly}
+        options={{ headerShown: false }}
+      />
+
       <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ title: 'Welcome' }}
-        />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
+        name="creatToDo"
+        component={createToDo}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="toDo"
+        component={toDo}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="modifyToDo"
+        component={modifyToDo}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="category"
+        component={category}
+        options={{ headerShown: false }}
+      />
+     
+     
+     
     </Stack.Navigator>
    
   );
 }
 
-
-//params example
-const HomeScreen = ({ navigation }) => {
+ function WeeklyView({navigation}) {
   return (
-    <Button
-      title="Go to Jane's profile"
-      onPress={() =>
-        navigation.navigate('Profile', { name: 'Jane' })
-      }
-    />
+    <View style={styles.container}>
+   
+      <Weekly navigation = {navigation}/>
+      <StatusBar style="auto" />
+    </View>
   );
-};
-const ProfileScreen = ({ navigation, route }) => {
-  return <Text>This is {route.params.name}'s profile</Text>;
-};
+}
+
+import { IconButton} from 'react-native-paper';
+function MainView({navigation}) {
+  return (
+    <View style={styles.container}>
+      <Main navigation = {navigation}/>
+       <StatusBar style="auto" />
+    </View>
+  );
+}
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#eee9e0",
+    // margin: 30,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
+
+
+
 export default RootStack;

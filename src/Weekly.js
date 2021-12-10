@@ -4,56 +4,6 @@ import moment from "moment";
 import styled from "styled-components";
 import Icon from "react-native-vector-icons/Ionicons";
 
-{/*data 불러오는 연습.. 
-import Typography from '@material-ui/core/Typography';
-
-const detabaseURL = "https://todo-cloud-3eed9-default-rtdb.firebaseio.com";
-
-class Words extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      words: {}
-    }
-  }
-  _get() {
-    fetch(`${datatbaseURL}/words.json`).then(res => {
-      if(res.status != 200){
-        throw new Error(res.statusText);
-      }
-      return res.json(); // json 불러오기 
-    }).then(words => this.setState({words : words })); 
-    //data를 word라는 변수에 담기
-  }
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextState.word != this.state.words;
-  }
-  componentDidMount(){
-    this._get();
-  }
-
-  render(){
-    <div>
-        {Object.keys(this.state.words).map(
-          const word = this.this.state.words[id];
-          return ( //컴포넌트 구성이 들어가야 할 부분! key속성 넣어줘야 
-              <View key={id}>
-              <View>
-                <Typography color="textSecondary" gutterBottom>
-                  가중치 : {word.weight}
-                </Typography>
-                <Typography varient="h5" component="h2"> //크기 설정
-                  {word.word}
-                </Typography>
-              </View>
-              </View>
-          );
-        )}
-    </div>
-  }
-} */}
-
-
 export default function Weekly() {
   const monthDate = moment().format("MM");
   const week = new Array(
