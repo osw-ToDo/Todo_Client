@@ -3,7 +3,7 @@ import {StatusBar, View, SafeAreaView, Text, ScrollView, StyleSheet} from 'react
 import {viewStyles, textStyles } from './styles';
 import {TodoInput} from './components';
 import {images} from './images';
-import IconButton from './components/IconButton';
+import {IconButton} from './components/IconButton';
 import Category from './components/Category';
 
 

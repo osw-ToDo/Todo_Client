@@ -23,8 +23,14 @@ export default function Main({ navigation }) {
           <BodyWMenuImg source={require("../assets/images/Wbutton.png")} /> 
           <BodyCMenuImg source={require("../assets/images/Cbutton.png")} />  */}
 
-          <TouchableOpacity style = {BodyMMenuImg}  onPress={() => navigation.navigate('showSign') }>
-          <Image style = {BodyMMenuImg} source={require("../assets/images/Mbutton.png")}/>
+          <TouchableOpacity style = {BodyMenuImg1.shadow} onPress={() => navigation.navigate('montly') }>
+          <Image style = {BodyMenuImg1.M}  source={require("../assets/images/Mbutton.png")}/>
+          </TouchableOpacity>
+          <TouchableOpacity style = {BodyMenuImg1.shadow} onPress={() => navigation.navigate('weekly') }>
+          <Image style = {BodyMenuImg1.W} source={require("../assets/images/Wbutton.png")}/>
+          </TouchableOpacity>
+          <TouchableOpacity style = {BodyMenuImg1.shadow} onPress={() => navigation.navigate('category') }>
+          <Image style = {BodyMenuImg1.C} source={require("../assets/images/Cbutton.png")}/>
           </TouchableOpacity>
         </BodyMenuView>
       </BodyView>
@@ -146,6 +152,54 @@ const FooterButtonImg1 = StyleSheet.create({
    
     width: 35,
     height: 35,
+
+  },
+});
+
+
+const BodyMenuImg1 = StyleSheet.create({
+  shadow:
+  {
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 5 },
+    shadowRadius: 10,
+    shadowOpacity: 0.35,
+
+  },
+  M: {
+  
+    
+    resizeMode : 'contain',
+   
+    marginLeft:40,
+    width: 80,
+    height: 73,
+
+    //backgroundColor : 'black'
+
+  },
+  W: {
+  
+ 
+    
+    resizeMode : 'contain',
+    marginLeft:39,
+    width: 80,
+    height: 57, 
+
+    //backgroundColor : 'black'
+
+  },
+  C: {
+  
+  
+    
+    resizeMode : 'contain',
+    marginLeft:33,
+    width: 93,
+    height: 59,
+
+    //backgroundColor : 'black'
 
   },
 });
